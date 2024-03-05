@@ -3,8 +3,8 @@
 namespace Bitguard.DiscordRazor;
 public class PageActions
 {
-    //seçilmiş serverın id'sini discord apiden alınan idlerle karşılaştırır. Uyuşma bulunduğunda index belirlenmiş olur.
-    //Ayrıca yetkisiz erişim engellenir. Bu yüzden kaldırma.
+    //compares id's from discord api with selected servers id. if it matches index is accepted.
+    //blocks unprivilieged activities. so, dont remove it
     public static int GetSelectedServerIndex(ServerData[] servers, string ssid)
     {
         int s = -1;
@@ -19,7 +19,8 @@ public class PageActions
         return s;
     }
 
-    public static string FirstLetters(string s)
+    //in dashboard, if a server doesnt have a picture, replaces image field with servers names first letters.
+    public static string FirstLetters(string s) 
     {
         string[] a = s.Split(' ');
         int c = a.Length;
@@ -33,7 +34,7 @@ public class PageActions
         return s;
     }
 
-    public static async Task<bool> EmailValid(string mail)
+    public static async Task<bool> EmailValid(string mail)  //email validator for communication modal.
     {
         var req = new HttpRequestMessage(HttpMethod.Get, "https://www.disify.com/api/email/" + mail);
 

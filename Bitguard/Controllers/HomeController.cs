@@ -89,6 +89,7 @@ namespace Bitguard.Controllers
             };
             DbActions db = new DbActions(config);
             db.UpdateServerConfig(serverConfig);
+
             return Redirect(Request.Headers.Referer);
         }
 
@@ -98,10 +99,10 @@ namespace Bitguard.Controllers
         public IActionResult Logout()
         {
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return LocalRedirect("/");
+            return LocalRedirect("/");  //main page after logout
         }
 
-        [Route("Communication")]
+        [Route("Communication")]    //not a page. do not returns view.
         public IActionResult Communication()
         {
             IPAddress? aypi = Request.HttpContext.Connection.RemoteIpAddress;
@@ -112,7 +113,7 @@ namespace Bitguard.Controllers
             return NoContent(); //204
         }
 
-        //[Route("Error")]
+        //[Route("Error")]  //this page is already defined as globalerrorhandler thus no route.
         [AllowAnonymous]
         [Authorize(AuthenticationSchemes = "Discord")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -131,7 +132,7 @@ namespace Bitguard.Controllers
                 else
                     error = new ErrorViewModel(Request.Query["status"].ToString());
             }
-            catch (Exception)
+            catch (Exception)   //if any problem occured with database its gonna crash again and write as log.
             {
                 _logger.LogError("Error cannot handled:\n" + handler.Error);
                 return LocalRedirect("/Home/Error?status=409");

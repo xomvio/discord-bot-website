@@ -13,6 +13,7 @@ using Bitguard.DiscordRazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
+	//if you want to use kestrel
 /*builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(443, listenopts =>
@@ -26,7 +27,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpContextAccessor();
-//builder.Services.AddEnyimMemcached();
+//builder.Services.AddEnyimMemcached();	//for memcache if you want to use
 
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
@@ -40,7 +41,7 @@ builder.Services.AddAuthentication(options =>
 	options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 })
 .AddCookie()
-.AddJwtBearer(options =>        //Cookie i�in bizim tokenimiz
+.AddJwtBearer(options =>        //Our JWT token for cookies
 {
 	options.TokenValidationParameters = new TokenValidationParameters
 	{
@@ -50,7 +51,7 @@ builder.Services.AddAuthentication(options =>
 
 		ValidIssuer = builder.Configuration.GetValue<string>("JWT:Issuer"),
 		ValidAudience = builder.Configuration.GetValue<string>("JWT:Audience"),
-		IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>("JWT:EncryptionKey")))
+		IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration.GetValue<string>("JWT:EncryptionKey") ?? ""))
 	};
 })
 .AddOAuth("Discord", options => //Discord api
@@ -59,21 +60,21 @@ builder.Services.AddAuthentication(options =>
 	options.Scope.Add("identify");
 	options.Scope.Add("guilds");
 	options.CallbackPath = "/auth/oauthcallback";
-	options.ClientId = builder.Configuration.GetValue<string>("Discord:ClientId");
-	options.ClientSecret = builder.Configuration.GetValue<string>("Discord:ClientSecret");
+	options.ClientId = builder.Configuration.GetValue<string>("Discord:ClientId") ?? "clientIdError";
+	options.ClientSecret = builder.Configuration?.GetValue<string>("Discord:ClientSecret") ?? "clientSecretError";
 	options.TokenEndpoint = "https://discord.com/api/oauth2/token";
 	options.UserInformationEndpoint = "https://discord.com/api/users/@me";
 
 
-	options.AccessDeniedPath = "/DiscordAuthFailed"; //Kullan�c�n�n yetki vermemesi durumunda bu sayfa. Sayfa i�eri�i olu�turulacak.
+	options.AccessDeniedPath = "/DiscordAuthFailed";
 
 	options.Events = new Microsoft.AspNetCore.Authentication.OAuth.OAuthEvents
 	{
 		OnCreatingTicket = async context =>
 		{
-			context.Identity.AddClaim(new Claim("token", context.AccessToken));
+			context?.Identity?.AddClaim(new Claim("token", context.AccessToken ?? "noAccessTokenGiven"));
 
-			context.RunClaimActions();
+			context?.RunClaimActions();
 
 		}
 	};
@@ -98,15 +99,15 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization(options =>
 	options.DataAnnotationLocalizerProvider = (type, factory) =>
 	{
-		var assemblyName = new AssemblyName(typeof(SharedResource).GetTypeInfo().Assembly.FullName);
-		return factory.Create(nameof(SharedResource), assemblyName.Name);
+		var assemblyName = new AssemblyName(typeof(SharedResource).GetTypeInfo().Assembly.FullName ?? "noNameFound");
+		return factory.Create(nameof(SharedResource), assemblyName.Name ?? "noNameFound");
 	});
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
 	var supportedCultures = new List<CultureInfo>
 	{
-		new CultureInfo("en-US"),
-		new CultureInfo("tr-TR"),
+		new("en-US"),
+		new("tr-TR"),
 	};
 	options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
 	options.SupportedCultures = supportedCultures;
@@ -127,14 +128,14 @@ if (!app.Environment.IsDevelopment())
 	app.UseHsts();
 }
 
-//app.UseEnyimMemcached();
-//app.UseHttpsRedirection();	//cloudflare ile sonsuz redirect d�ng�s�
+//app.UseEnyimMemcached();		//for memcache
+//app.UseHttpsRedirection();	//line commented for prevent cloudflare redirect loop. enable if you need.
 app.UseStaticFiles();
 
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
 
-app.UseForwardedHeaders(new ForwardedHeadersOptions //ip alabilmek i�in
+app.UseForwardedHeaders(new ForwardedHeadersOptions //for port-forwarding and more
 {
 	ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 });
@@ -142,7 +143,7 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions //ip alabilmek i�in
 
 app.UseCookiePolicy(new CookiePolicyOptions()
 {
-	MinimumSameSitePolicy = SameSiteMode.Lax    //Disk�rtten cookie kabul etmesi i�in.
+	MinimumSameSitePolicy = SameSiteMode.Lax    //To enable discord cookies after redirect
 });
 
 app.UseRouting();

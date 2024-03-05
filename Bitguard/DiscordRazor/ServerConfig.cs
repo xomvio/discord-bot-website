@@ -8,7 +8,7 @@
         public string badWords = "";
         public string badWordsWarn = "";
         public string ntfChannel = "";
-        public ServerChannel[] serverChannels;
+        public ServerChannel[] serverChannels = {new()};
         public ServerConfig() { }
         public ServerConfig(string _serverId, bool _susCheck, bool _blockSpam, string _badWords, string _badWordsWarn, string _ntfChannel, ServerChannel[] _serverChannels)
         {

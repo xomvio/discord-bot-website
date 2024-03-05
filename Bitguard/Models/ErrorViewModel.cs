@@ -26,7 +26,7 @@ namespace Bitguard.Models
             Message = handler.Error.Message;
             Path = handler.Path;
             Endpoint = handler.Endpoint?.ToString() ?? "none";
-            DbActions db = new DbActions(config);
+            DbActions db = new(config);
             db.AddErrorLog(handler);
         }
     }

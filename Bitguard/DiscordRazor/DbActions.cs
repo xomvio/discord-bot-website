@@ -58,7 +58,7 @@ namespace Bitguard.DiscordRazor
         {
             using (MySqlCommand cmd = new MySqlCommand("SELECT CHANNEL_ID, CHANNEL_NAME FROM channels WHERE GUILD_ID=" + serverId))
             {
-                List<ServerChannel> channels = new List<ServerChannel>();
+                List<ServerChannel> channels = new();
                 cmd.Connection = conn;
                 conn.Open();
                 var reader = cmd.ExecuteReader();
@@ -147,14 +147,14 @@ namespace Bitguard.DiscordRazor
             {
                 cmd.Connection = conn;
                 conn.Open();
-                counts[0] = Int32.Parse(cmd.ExecuteScalar().ToString());
+                counts[0] = Int32.Parse(cmd.ExecuteScalar().ToString() ?? "0");
                 conn.Close();
             }
             using(MySqlCommand cmd = new MySqlCommand("SELECT COUNT(USER_ID) FROM sus_users WHERE HAS_BANNED=1 OR HAS_QUARANTINED=1"))
             {
                 cmd.Connection = conn;
                 conn.Open();
-                counts[1] = Int32.Parse(cmd.ExecuteScalar().ToString());
+                counts[1] = Int32.Parse(cmd.ExecuteScalar().ToString() ?? "0");
                 conn.Close();
             }
             return counts;

@@ -1,0 +1,59 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Bitguard
+build_property.RootNamespace = Bitguard
+build_property.ProjectDir = /home/omvio/Documents/GitHub/discord-bot-website/Bitguard/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/omvio/Documents/GitHub/discord-bot-website/Bitguard
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/Home/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/Home/Faq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9GYXEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/Home/Premium.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9QcmVtaXVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

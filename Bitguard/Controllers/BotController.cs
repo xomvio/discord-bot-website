@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 
-namespace Bitguard.Controllers
+        //THIS API USED FOR MEMCACHE. IF YOU HAVE NO WORK WITH API. IT MAY BETTER TO DELETE.
+namespace Bitguard.Controllers      
 {
     [Route("[controller]")]
     [ApiController]
@@ -19,7 +20,7 @@ namespace Bitguard.Controllers
 
         }
         [HttpGet("getnewdata")]
-        public async Task<IActionResult> ProcessRequest()
+        public async Task<IActionResult> ProcessRequest()   //I didnt write this
         {
             bool allsexy = false;
             string gobot = mc.Get<string>("gobot");

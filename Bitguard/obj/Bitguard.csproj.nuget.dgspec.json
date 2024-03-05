@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Bitguard.csproj": {}
+  },
+  "projects": {
+    "/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Bitguard.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Bitguard.csproj",
+        "projectName": "Bitguard",
+        "projectPath": "/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/Bitguard.csproj",
+        "packagesPath": "/home/omvio/.nuget/packages/",
+        "outputPath": "/home/omvio/Documents/GitHub/discord-bot-website/Bitguard/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/omvio/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AspNetCoreRateLimit": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "EnyimMemcachedCore": {
+              "target": "Package",
+              "version": "[2.6.6, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

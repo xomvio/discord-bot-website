@@ -14,8 +14,8 @@ namespace Bitguard.Services
         public LanguageService(IStringLocalizerFactory factory)
         {
             var type = typeof(SharedResource);
-            var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
-            localizer = factory.Create(nameof(SharedResource), assemblyName.Name);
+            var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName ?? "noAssemblyName");
+            localizer = factory.Create(nameof(SharedResource), assemblyName.Name ?? "noAssemblyName");
         }
         public string Get(string key)
         {

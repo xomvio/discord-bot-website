@@ -14,7 +14,7 @@ namespace Bitguard.Models
 
 		public DashboardModel(IConfiguration config, string nekot, string ssid)
 		{
-			DbActions db = new DbActions(config);
+			DbActions db = new(config);
 			selectedServerId = ssid;
 
 			var usertask = UserData.FetchAsync(nekot);
@@ -28,6 +28,10 @@ namespace Bitguard.Models
 			if (db.isServerExistsOnDb(selectedServerId))
 			{
 				serverConfig = db.GetServerConfig(selectedServerId);
+			}
+			else
+			{
+				serverConfig = new();	//to prevent potential errors future.
 			}
 
 			links = db.GetServerLinks(servers);
