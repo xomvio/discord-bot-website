@@ -1,0 +1,10 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = L.Get("errorTitle");
+}
+
+<div class="text-center error-margin">
+    <h1>@L.Get("errorD")</h1>
+    <h4>"@Model.ShownError"</h4>
+    <a class="text-white" href="/"><h2>@L.Get("errorGoMain")</h2></a>
+</div>

@@ -1,0 +1,259 @@
+﻿@using Bitguard.DiscordRazor;
+@model DashboardModel
+@{
+	ViewData["Title"] = L.Get("dashTitle");
+}
+@if (Model.selectedServerIndex != -1)
+    {
+    <div class="row dash-main">
+    <div class="col-11 col-md-2 dash-server">
+        <div>
+            <div class="d-none d-md-block dash-server-top"></div>
+            <div class="d-flex flex-column flex-shrink-0 p-3">
+                <span class="m-auto text-decoration-none">
+                        <span class="d-flex justify-content-center position-relative">
+                        @if (Model.servers[Model.selectedServerIndex].Icon == "")
+                        {
+                                <img class="img-fluid rounded-circle d-block imgbg" src="~/img/defbg.png" />
+                                <span class="firstLetters fs-2">@PageActions.FirstLetters(Model.servers[Model.selectedServerIndex].Name)</span>
+                        }
+                        else
+                        {
+                                <img class="img-fluid rounded-circle d-block imgbg" src="https://cdn.discordapp.com/icons/@Model.servers[Model.selectedServerIndex].Id/@Model.servers[Model.selectedServerIndex].Icon" />
+                        }                    
+                    </span>
+                        <span class="fs-4 text-white d-block text-center">@Model.servers[Model.selectedServerIndex].Name</span>
+                    <span class="fs-4 text-white d-block text-center">@L.Get("dashTitle")</span>
+                </span>
+                <div>
+                    <select name="selectServer" id="selectServer" onchange="serverSelect(this)" class="form-select form-select-lg bg-dark text-white mt-2 mb-3">
+                        @for (int i = 0; i < Model.servers.Count(); i++)
+                        {
+                            string link="";
+                            if (Model.links[i][0] == 'h')   //düz href verilecek
+                                link = Model.servers[i].Id;
+                            else                            //invite linke yönlendirecek
+                                link = "invite";
+
+                            if (Model.selectedServerId == Model.servers[i].Id)    //Seçili sunucu isminin başına ikonu eklenecek
+                            {
+                                    <option value="@link" selected="selected">@Model.servers[i].Name</option>
+                            }
+                            else
+                            {
+                                    <option value="@link">@Model.servers[i].Name</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-1 d-none d-md-block"></div>
+    <div class="col-11 col-md-8">
+        <form id="configForm" method="get" action="/SaveChanges">
+
+            <input type="hidden" name="s" value="@Model.servers[Model.selectedServerIndex].Id" />
+
+            <div class="inputborder">
+                <h6 class="mb-2">
+                    <button type="button" class="explainBtn" onclick="showData('ntf')">?</button>
+                    @L.Get("dashNtfChannel")
+                </h6>
+
+                <div id="ntf" class="kolaps">
+                    <p class="explainmb">@L.Get("dashNtfChannelD1")</p>
+                </div>
+
+                <select name="channelSelect" required="required" class="form-select bg-dark text-white selectx mt-1">
+                    @for (int i = 0; i < Model.serverConfig.serverChannels.Length; i++)
+                    {
+                        if (Model.serverConfig.ntfChannel == Model.serverConfig.serverChannels[i].ChannelId)
+                        {
+                            <option value="@Model.serverConfig.serverChannels[i].ChannelId" selected="selected">@Model.serverConfig.serverChannels[i].ChannelName</option>
+                        }
+                        else
+                        {
+                            <option value="@Model.serverConfig.serverChannels[i].ChannelId">@Model.serverConfig.serverChannels[i].ChannelName</option>
+                        }
+                    }
+                </select>
+
+            </div>
+
+            <div class="inputborder">
+                <div class="d-flex justify-content-between">
+                    <h6 class="my-auto">
+                        <button type="button" class="explainBtn" onclick="showData('susc')">?</button>
+                        @L.Get("dashSusCheck")
+                    </h6>
+                    <span>
+                        <label class="switch">
+                            <input name="suscheck" type="checkbox" @Model.serverConfig.susCheck>
+                            <span class="slider"></span>
+                        </label>
+                    </span>
+                </div>
+
+                <div id="susc" class="kolaps">
+                    <p class="explain">
+                        @L.Get("dashSusCheckD1")
+                    </p>
+                    <p class="explain mt-2">
+                        @L.Get("dashSusCheckD2")
+                    </p>
+                </div>
+            </div>
+
+            <div class="inputborder">
+                <div class="d-flex justify-content-between">
+                    <h6 class="my-auto">
+                        <button type="button" class="explainBtn" onclick="showData('spm')">?</button>
+                        @L.Get("dashSpamBlock")
+                    </h6>
+                    <span>
+                        <label class="switch">
+                                <input name="spamblock" type="checkbox" @Model.serverConfig.blockSpam>
+                            <span class="slider"></span>
+                        </label>
+                    </span>
+                </div>
+
+                <div id="spm" class="kolaps">
+                    <p class="explain">
+                        @L.Get("dashSpamBlockD1")
+                    </p>
+                    <p class="explain mt-2">
+                         @L.Get("dashSpamBlockD2")
+                    </p>
+                    <p class="explain mt-2">
+                        @L.Get("dashSpamBlockD3")
+                    </p>
+                </div>
+            </div>
+
+            <div class="inputborder">
+                <div class="d-flex justify-content-between">
+                    <h6 class="my-auto">
+                        <button type="button" class="explainBtn" onclick="showData('smb')">?</button>
+                        @L.Get("dashAvatarCheck")
+                    </h6>
+                    <span>
+                        <label class="switch">
+                            <input name="imgsearch" type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </span>
+                </div>
+
+                <div id="smb" class="kolaps">
+                    <p class="explain">
+                        @L.Get("dashAvatarCheckD1")
+                    </p>
+                    <p class="explain mt-2">
+                        @L.Get("dashAvatarCheckD2")
+                    </p>
+                    <p class="explain mt-2">
+                        @L.Get("dashAvatarCheckD3")
+                    </p>
+                </div>
+            </div>
+
+            <div class="inputborder">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>
+                            <button type="button" class="explainBtn" onclick="showData('bw')">?</button>
+                            @L.Get("dashBadWords")
+                        </h6>
+                        <div id="bw" class="kolaps">
+                            <p class="explainmb">
+                            @L.Get("dashBadWordsD1")
+                            </p>
+                        </div>
+                    </div>
+                    <button class="resetbtn" onclick="badWordsResetButton(event)">@L.Get("reset")</button>
+                </div>
+
+                        <textarea id="badwords" name="badwords" class="textx" rows="3">@Model.serverConfig.badWords</textarea>
+
+                <div class="d-flex justify-content-between secondarea">
+                    <div>
+                        <h6>
+                            <button type="button" class="explainBtn" onclick="showData('bwm')">?</button>
+                            @L.Get("dashBadWordsWarn")
+                        </h6>
+
+                        <div id="bwm" class="kolaps">
+                            <p class="explainmb">
+                                @L.Get("dashBadWordsWarnD1")
+                            </p>
+                        </div>
+                    </div>                    
+                    <button class="resetbtn" onclick="badWordsWarnResetButton(event)">@L.Get("dashReset")</button>
+                </div>
+
+                        <textarea id="badwordswarn" name="badwordwarn" class="textx" rows="3">@Model.serverConfig.badWordsWarn</textarea>
+                </div>
+
+
+            <div class="inputborder d-flex justify-content-center">
+                <button type="submit" class="sendBtn">@L.Get("dashSaveChanges")</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-1 d-none d-md-block"></div>
+    </div>
+
+    <script>
+        function badWordsResetButton(e) {
+            document.getElementById("badwords").textContent = "@L.Get("dashBadWordsReset")";
+            e.preventDefault();
+        }
+
+        function badWordsWarnResetButton(e) {
+            document.getElementById("badwordswarn").textContent = "@L.Get("dashBadWordsWarnReset")";
+            e.preventDefault();
+        }
+    </script>
+}
+else{
+    <div class="row bg-dark">
+        <div class="col-12 mt-3">
+            <h3 class="text-center">@L.Get("dashSelectServer")</h3>
+        </div>
+    </div>
+    <div class="row dash-main">
+        <div class="col-11 col-md-8">
+            <div class="row d-flex justify-content-center">
+                @if (Model.servers.Length == 0)
+                {
+                    <h1 class="servers-empty">@L.Get("dashNoServer")</h1>
+                }
+                @for (int i = 0; i < Model.servers.Count(); i++)
+                {
+                <div id="@i" class="cardxbg col-12 col-md-3 text-center p-0">
+                    <a class="text-decoration-none" @Model.links[i]><div class="cardx" >
+                    @if (Model.servers[i].Icon == "")
+                    {
+                        <script>
+                            document.getElementById("@i").style.background = "rgb(33, 37, 41)";
+                            document.getElementById("@i").style.background = "radial-gradient(circle, rgba(33,37,41,1) 0%, rgba(52,58,64,1) 40%, rgba(33,37,41,1) 100%)";
+                        </script>
+                        <img class="img-fluid rounded-circle d-block mt-3 mb-3 mx-auto" src="~/img/defbg.png" />
+                    }
+                    else
+                    {
+                        <script>
+                            document.getElementById("@i").style.backgroundImage = "url('https://cdn.discordapp.com/icons/@Model.servers[i].Id/@Model.servers[i].Icon')"
+                        </script>
+                        <img class="img-fluid rounded-circle d-block mt-3 mb-3 mx-auto" src="https://cdn.discordapp.com/icons/@Model.servers[i].Id/@Model.servers[i].Icon" />
+                    }
+                        <span class="fs-4 text-white text-center mt-4 mb-3 p-2 server-name-bg">@Model.servers[i].Name</span>
+                    </div></a>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="dashAvatarCheck" xml:space="preserve">
+    <value>Check users avatar</value>
+  </data>
+  <data name="dashAvatarCheckD1" xml:space="preserve">
+    <value>When you enable this option, Bitguard regularly scans the avatars of server members and checks their similarity with the server icon. Particularly in cases such as crypto IPOs, fraudsters often try to impersonate the server and therefore avatar similarity detection is of great importance.</value>
+  </data>
+  <data name="dashAvatarCheckD2" xml:space="preserve">
+    <value>Bitguard uses advanced algorithms to detect avatar similarity and increases the security of your server when this feature is enabled. If the profile photos of server members are highly similar to the server icon, Bitguard will warn you and help you take necessary precautions.</value>
+  </data>
+  <data name="dashAvatarCheckD3" xml:space="preserve">
+    <value>This feature provides a more sensitive approach to fraud attempts while protecting the security of your server.</value>
+  </data>
+  <data name="dashBadWords" xml:space="preserve">
+    <value>List of Restricted Words:</value>
+  </data>
+  <data name="dashBadWordsD1" xml:space="preserve">
+    <value>You can use this field to create a list of words you want to prohibit on your server. Add each word/words separated by commas. Bitguard will use this list to scan and provide warnings when users send messages that contain these words. This feature is customized for anti-scam purposes and can also be used to encourage the community to use appropriate and respectful language if desired.</value>
+  </data>
+  <data name="dashBadWordsReset" xml:space="preserve">
+    <value>free, discount, campaign, sale, gift, promotion, raffle, opportunity, guarantee, traffic increase, special offers, limited offers, easy money, debt payment, investment opportunity, online income, earn money fast, job offer, offers, zero risk , 0 risk, risk-free, win now, free reward, quick wealth, unlimited earnings, instant confirmation</value>
+  </data>
+  <data name="dashBadWordsWarn" xml:space="preserve">
+    <value>Warning Message:</value>
+  </data>
+  <data name="dashBadWordsWarnD1" xml:space="preserve">
+    <value>In this field, enter the warning message you want to display to users when inappropriate words are used. The warning message will inform users to adhere to the rules and avoid using inappropriate words. This is an effective way to maintain order within your community.</value>
+  </data>
+  <data name="dashBadWordsWarnReset" xml:space="preserve">
+    <value>**Warning**: Suspicious message content has been detected. If any fraud attempt or fraud attempt is detected, necessary legal action and reporting processes will be initiated. Please be vigilant and report any suspicious activity to contribute to the safety of our community.</value>
+  </data>
+  <data name="dashNoServer" xml:space="preserve">
+    <value>YOU DO NOT HAVE ANY SERVERS THAT YOU MANAGE AS AN ADMINISTRATOR</value>
+  </data>
+  <data name="dashNtfChannel" xml:space="preserve">
+    <value>Notification Channel</value>
+  </data>
+  <data name="dashNtfChannelD1" xml:space="preserve">
+    <value>To ensure that your moderators are promptly and effectively informed in various critical situations (e.g., suspicious activity alerts), notifications are sent to this channel. It is recommended to select a channel that only authorized personnel can access. This channel plays a critical role in the security and order of your server.</value>
+  </data>
+  <data name="dashReset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="dashSaveChanges" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="dashSelectServer" xml:space="preserve">
+    <value>Select Server</value>
+  </data>
+  <data name="dashSpamBlock" xml:space="preserve">
+    <value>Spam Blocker</value>
+  </data>
+  <data name="dashSpamBlockD1" xml:space="preserve">
+    <value>When you enable this option, Bitguard automatically monitors and filters spam content on your server. This helps keep your server clean and organized, preventing spam content from harming your community.</value>
+  </data>
+  <data name="dashSpamBlockD2" xml:space="preserve">
+    <value>When this option is enabled, messages sent on your server are continuously scanned. Repeated phrases are blocked, and the user is muted with a warning sent via private message. Additionally, a message is sent in the notification channel for administrators to take action.</value>
+  </data>
+  <data name="dashSpamBlockD3" xml:space="preserve">
+    <value>This feature allows you to enjoy your community without spending more time dealing with unwanted content. It helps enhance your community's experience and makes your server safer without requiring additional time and resources to combat unwanted content.</value>
+  </data>
+  <data name="dashSusCheck" xml:space="preserve">
+    <value>Periodically Check the List of Suspected Users Across Servers.</value>
+  </data>
+  <data name="dashSusCheckD1" xml:space="preserve">
+    <value>When this option is enabled, users who have been flagged as suspicious in other servers protected by Bitguard are detected in your server. This helps enhance the security of your server because when suspicious users from other servers enter your server, Bitguard recognizes and marks them. This allows you to respond to potential threats more quickly and effectively.</value>
+  </data>
+  <data name="dashSusCheckD2" xml:space="preserve">
+    <value>This feature allows Bitguard to enhance security measures based on inter-server cooperation, contributing to a safer community.</value>
+  </data>
+  <data name="dashTitle" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="errorD" xml:space="preserve">
+    <value>AN ERROR HAS OCCURED</value>
+  </data>
+  <data name="errorGoMain" xml:space="preserve">
+    <value>GO TO THE HOMEPAGE</value>
+  </data>
+  <data name="errorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="faqD1" xml:space="preserve">
+    <value>Bitguard is a bot specially designed for use on Discord servers. It offers various features such as server security, fraud prevention, and spam control.</value>
+  </data>
+  <data name="faqD10" xml:space="preserve">
+    <value>If you have more questions or issues, please reach out to us via the "Contact" button located at the bottom right of the website. We're here to assist you and would be happy to help.</value>
+  </data>
+  <data name="faqD2" xml:space="preserve">
+    <value>To add Bitguard to your server, visit the official website and follow the instructions.</value>
+  </data>
+  <data name="faqD3" xml:space="preserve">
+    <value>The free version includes basic security features, while the premium version offers additional features and advanced security. The premium version provides more customization options and support.</value>
+  </data>
+  <data name="faqD4" xml:space="preserve">
+    <value>Bitguard can be used on any server that complies with Discord's rules.</value>
+  </data>
+  <data name="faqD5" xml:space="preserve">
+    <value>Bitguard scans the members on your server, monitors suspicious behavior, filters out objectionable content, and performs moderation actions when necessary.</value>
+  </data>
+  <data name="faqD6" xml:space="preserve">
+    <value>Bitguard updates automatically, so you don't need to perform manual updates.</value>
+  </data>
+  <data name="faqD7" xml:space="preserve">
+    <value>Bitguard takes various security measures to detect potential threats and protect users.</value>
+  </data>
+  <data name="faqD8" xml:space="preserve">
+    <value>You can configure Bitguard according to the needs of your server. After logging in to the website, you can make customizations in the "My Servers" section.</value>
+  </data>
+  <data name="faqD9" xml:space="preserve">
+    <value>To support Bitguard, visit the official website and explore options for making donations or using the premium version.</value>
+  </data>
+  <data name="faqQ1" xml:space="preserve">
+    <value>What is Bitguard?</value>
+  </data>
+  <data name="faqQ10" xml:space="preserve">
+    <value>Do you have any other questions about Bitguard?</value>
+  </data>
+  <data name="faqQ2" xml:space="preserve">
+    <value>How do I add Bitguard to my server?</value>
+  </data>
+  <data name="faqQ3" xml:space="preserve">
+    <value>What is the difference between the free and premium versions of Bitguard?</value>
+  </data>
+  <data name="faqQ4" xml:space="preserve">
+    <value>On which servers can I use Bitguard?</value>
+  </data>
+  <data name="faqQ5" xml:space="preserve">
+    <value>What kind of operations does Bitguard perform on my server?</value>
+  </data>
+  <data name="faqQ6" xml:space="preserve">
+    <value>How do I update Bitguard?</value>
+  </data>
+  <data name="faqQ7" xml:space="preserve">
+    <value>How does Bitguard protect my server?</value>
+  </data>
+  <data name="faqQ8" xml:space="preserve">
+    <value>How can I configure Bitguard?</value>
+  </data>
+  <data name="faqQ9" xml:space="preserve">
+    <value>How can I support Bitguard?</value>
+  </data>
+  <data name="faqTitle" xml:space="preserve">
+    <value>Frequently Asked Questions</value>
+  </data>
+  <data name="indexD" xml:space="preserve">
+    <value>Bitguard is ready to secure your server! It continuously scans members and messages, swiftly detects suspicious behavior, and takes the necessary actions. It's specially equipped to combat scams. Add Bitguard now to help your community have a safer Discord experience!</value>
+  </data>
+  <data name="indexInvite" xml:space="preserve">
+    <value>Add to Discord</value>
+  </data>
+  <data name="indexLearnMore" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
+  <data name="indexTitle" xml:space="preserve">
+    <value>Homepage</value>
+  </data>
+  <data name="layoutContact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="layoutContactForm" xml:space="preserve">
+    <value>Contact Form</value>
+  </data>
+  <data name="layoutCurrentLang" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="layoutFaq" xml:space="preserve">
+    <value>F.A.Q.</value>
+  </data>
+  <data name="layoutFormError" xml:space="preserve">
+    <value>Please Wait a Moment</value>
+  </data>
+  <data name="layoutFormErrorMessage" xml:space="preserve">
+    <value>You tried to send too many messages in a short time. Please try again later.</value>
+  </data>
+  <data name="layoutFormSent" xml:space="preserve">
+    <value>Form Sent</value>
+  </data>
+  <data name="layoutFormSentMessage" xml:space="preserve">
+    <value>You will be contacted at the e-mail address you provided.</value>
+  </data>
+  <data name="layoutInvalidMail" xml:space="preserve">
+    <value>Invalid e-mail</value>
+  </data>
+  <data name="layoutLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="layoutMail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="layoutMessage" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="layoutMetaContent" xml:space="preserve">
+    <value>Bitguard is ready to secure your server! It constantly scans members and messages, quickly detects suspicious behavior and takes necessary actions. It is specially equipped against fraud.</value>
+  </data>
+  <data name="layoutMyServers" xml:space="preserve">
+    <value>My Servers</value>
+  </data>
+  <data name="layoutPrivacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="layoutSend" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="pd1" xml:space="preserve">
+    <value>Omvio&amp;Daniasu operates the www.bitguard.com website, which provides the SERVICE.</value>
+  </data>
+  <data name="pd10" xml:space="preserve">
+    <value>We want to inform our Service users that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</value>
+  </data>
+  <data name="pd11" xml:space="preserve">
+    <value>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</value>
+  </data>
+  <data name="pd12" xml:space="preserve">
+    <value>Our Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</value>
+  </data>
+  <data name="pd13" xml:space="preserve">
+    <value>Our Services do not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</value>
+  </data>
+  <data name="pd14" xml:space="preserve">
+    <value>We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.</value>
+  </data>
+  <data name="pd15" xml:space="preserve">
+    <value>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</value>
+  </data>
+  <data name="pd2" xml:space="preserve">
+    <value>This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the Bitguard website.</value>
+  </data>
+  <data name="pd3" xml:space="preserve">
+    <value>If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</value>
+  </data>
+  <data name="pd4" xml:space="preserve">
+    <value>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at www.bitguard.com, unless otherwise defined in this Privacy Policy.</value>
+  </data>
+  <data name="pd5" xml:space="preserve">
+    <value>For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to your name, phone number, and postal address. The information that we collect will be used to contact or identify you.</value>
+  </data>
+  <data name="pd6" xml:space="preserve">
+    <value>We want to inform you that whenever you visit our Service, we collect information that your browser sends to us that is called Log Data. This Log Data may include information such as your computer's Internet Protocol ("IP") address, browser version, pages of our Service that you visit, the time and date of your visit, the time spent on those pages, and other statistics.</value>
+  </data>
+  <data name="pd7" xml:space="preserve">
+    <value>Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your computer's hard drive.</value>
+  </data>
+  <data name="pd8" xml:space="preserve">
+    <value>Our website uses these "cookies" to collection information and to improve our Service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our Service.</value>
+  </data>
+  <data name="pd9" xml:space="preserve">
+    <value>We may employ third-party companies and individuals due to the following reasons:</value>
+  </data>
+  <data name="ph1" xml:space="preserve">
+    <value>Privacy Policy of Omvio&amp;Daniasu</value>
+  </data>
+  <data name="ph10" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="ph2" xml:space="preserve">
+    <value>Information Collection and Use</value>
+  </data>
+  <data name="ph3" xml:space="preserve">
+    <value>Log Data</value>
+  </data>
+  <data name="ph4" xml:space="preserve">
+    <value>Cookies</value>
+  </data>
+  <data name="ph5" xml:space="preserve">
+    <value>Service Providers</value>
+  </data>
+  <data name="ph6" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="ph7" xml:space="preserve">
+    <value>Links to Other Sites</value>
+  </data>
+  <data name="ph8" xml:space="preserve">
+    <value>Children's Privacy</value>
+  </data>
+  <data name="ph9" xml:space="preserve">
+    <value>Changes to This Privacy Policy</value>
+  </data>
+  <data name="pli1" xml:space="preserve">
+    <value>To facilitate our Service;</value>
+  </data>
+  <data name="pli2" xml:space="preserve">
+    <value>To provide the Service on our behalf;</value>
+  </data>
+  <data name="pli3" xml:space="preserve">
+    <value>To perform Service-related services; or</value>
+  </data>
+  <data name="pli4" xml:space="preserve">
+    <value>To assist us in analyzing how our Service is used.</value>
+  </data>
+  <data name="premAllPrem" xml:space="preserve">
+    <value>In the beta version, all users have premium privileges.</value>
+  </data>
+  <data name="premD" xml:space="preserve">
+    <value>Take your server's security to the next level by gaining unlimited access to all of BitGuard's features</value>
+  </data>
+  <data name="premDataSecurity" xml:space="preserve">
+    <value>Personal Data Protection</value>
+  </data>
+  <data name="premDataSecurityD" xml:space="preserve">
+    <value>User data privacy is important. Bitguard has been designed with sensitivity to protect your personal data and takes measures to prevent its misuse.</value>
+  </data>
+  <data name="premGetPrem" xml:space="preserve">
+    <value>Get Premium</value>
+  </data>
+  <data name="premInterserverNet" xml:space="preserve">
+    <value>Inter-Server Network</value>
+  </data>
+  <data name="premInterserverNetD" xml:space="preserve">
+    <value>Our bot checks whether users have exhibited suspicious behavior in other servers using Bitguard. If a user has been flagged as suspicious elsewhere, this information is relayed to the moderators</value>
+  </data>
+  <data name="premInvite" xml:space="preserve">
+    <value>Add to Discord</value>
+  </data>
+  <data name="premMsgScan" xml:space="preserve">
+    <value>Message Scan</value>
+  </data>
+  <data name="premMsgScanD" xml:space="preserve">
+    <value>Messages on your server are scanned. These scans help us quickly detect harmful content or unwanted behaviors. Phishing links, websites used for scams, and other negative content are automatically filtered, and necessary measures are taken</value>
+  </data>
+  <data name="premQuarantine" xml:space="preserve">
+    <value>Quarantine</value>
+  </data>
+  <data name="premQuarantineD" xml:space="preserve">
+    <value>Members displaying suspicious behavior are restricted within your server and kept in a special quarantine channel. This measure aims to maintain the overall security of your server and allows for immediate intervention. Members are moved to the quarantine area, ceasing their actions, and issues are reported to moderators. This approach provides moderators with the opportunity to review the behavior of the suspect and make decisions.</value>
+  </data>
+  <data name="premScamDetect" xml:space="preserve">
+    <value>Spam and Threat Detection</value>
+  </data>
+  <data name="premScamDetectD" xml:space="preserve">
+    <value>Bitguard recognizes spam messages and potential threats on your server and removes these messages from the view of users. This helps keep your server clean and organized.</value>
+  </data>
+  <data name="premServerCount" xml:space="preserve">
+    <value>Servers Secured</value>
+  </data>
+  <data name="premSusCaught" xml:space="preserve">
+    <value>Suspects Caught</value>
+  </data>
+  <data name="premTitle" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="premUserNtf" xml:space="preserve">
+    <value>User Notifications</value>
+  </data>
+  <data name="premUserNtfD" xml:space="preserve">
+    <value>You receive instant notifications about users displaying suspicious or malicious behavior. This allows moderators to intervene quickly and resolve potential issues.</value>
+  </data>
+  <data name="premUserScan" xml:space="preserve">
+    <value>Member Scanning</value>
+  </data>
+  <data name="premUserScanD" xml:space="preserve">
+    <value>Members on your server are continuously scanned, and their behavior is monitored. Bitguard identifies members who potentially exhibit dangerous or suspicious behavior.</value>
+  </data>
+  <data name="privacyTitle" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+</root>

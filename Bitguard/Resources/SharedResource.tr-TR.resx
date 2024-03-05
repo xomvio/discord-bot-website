@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="dashAvatarCheck" xml:space="preserve">
+    <value>Kullanıcı avatarı kontrolü</value>
+  </data>
+  <data name="dashAvatarCheckD1" xml:space="preserve">
+    <value>Bu seçeneği etkinleştirdiğinizde, Bitguard sunucu üyelerinin avatarlarını düzenli olarak tarar ve sunucu simgesiyle benzerliğini kontrol eder. Özellikle kripto halka arzları gibi durumlarda, dolandırıcılar sık sık sunucuyu taklit etmeye çalışır ve bu nedenle avatar benzerliği tespiti büyük bir önem taşır.</value>
+  </data>
+  <data name="dashAvatarCheckD2" xml:space="preserve">
+    <value>Bitguard, avatar benzerliği tespitinde gelişmiş algoritmalar kullanır ve bu özellik etkinleştirildiğinde sunucunuzun güvenliğini artırır. Eğer sunucu üyelerinin profil fotoğrafları sunucu simgesiyle yüksek benzerlik gösteriyorsa, Bitguard sizi uyarır ve gereken önlemleri almanıza yardımcı olur.</value>
+  </data>
+  <data name="dashAvatarCheckD3" xml:space="preserve">
+    <value>Bu özellik, sunucunuzun güvenliğini korurken, dolandırıcılık girişimlerine karşı daha hassas bir yaklaşım sunar.</value>
+  </data>
+  <data name="dashBadWords" xml:space="preserve">
+    <value>Sakıncalı Kelimeler Listesi:</value>
+  </data>
+  <data name="dashBadWordsD1" xml:space="preserve">
+    <value>Bu alanı kullanarak sunucunuzda yasaklamak istediğiniz kelimelerin bir listesini oluşturabilirsiniz. Her bir kelimeyi/kelimeleri virgül ile ayırarak ekleyin. Bitguard, bu listedeki kelimeleri taramak ve kullanıcılar bu kelimeleri içeren mesajlar gönderdiğinde uyarıda bulunmak için kullanacaktır. Bu özellik, dolandırıcılığa karşı özelleştirilmiş olup, istenirse topluluğun uygun ve saygılı bir dil kullanması için de kullanılabilir.</value>
+  </data>
+  <data name="dashBadWordsReset" xml:space="preserve">
+    <value>ücretsiz, indirim, kampanya, satış, hediye, promosyon, çekiliş, fırsat, garanti, trafik artırma, özel teklif, sınırlı teklif, kolay para, borç ödeme, yatırım fırsatı, online gelir, hızlı para kazan, iş teklifi, teklif, sıfır risk, 0 risk, risksiz, hemen kazan, ücretsiz ödül, hızlı zenginlik, sınırsız kazanç, anında onay</value>
+  </data>
+  <data name="dashBadWordsWarn" xml:space="preserve">
+    <value>Uyarı Mesajı:</value>
+  </data>
+  <data name="dashBadWordsWarnD1" xml:space="preserve">
+    <value>Bu alana, sakıncalı kelimelerin kullanılması durumunda kullanıcılara göstermek istediğiniz uyarı mesajını girin. Uyarı mesajı, kullanıcıları kurallara uymaları ve sakıncalı kelimeleri kullanmamaları konusunda bilgilendirecektir. Bu, topluluğunuzun düzenini korumak için etkili bir yol sağlar.</value>
+  </data>
+  <data name="dashBadWordsWarnReset" xml:space="preserve">
+    <value>**Uyarı**: Şüpheli mesaj içeriği tespit edilmiştir. Herhangi bir dolandırıcılık girişimi veya sahtekarlık teşebbüsü tespit edilirse gerekli yasal işlem ve raporlama süreçleri başlatılacaktır. Lütfen topluluğumuzun güvenliğine katkıda bulunmak için dikkatli olun ve herhangi bir şüpheli faaliyeti bildirin.</value>
+  </data>
+  <data name="dashNoServer" xml:space="preserve">
+    <value>YÖNETİCİSİ OLDUĞUNUZ HERHANGİ BİR SUNUCU BULUNMAMAKTADIR</value>
+  </data>
+  <data name="dashNtfChannel" xml:space="preserve">
+    <value>Bildirim Kanalı</value>
+  </data>
+  <data name="dashNtfChannelD1" xml:space="preserve">
+    <value>Moderatörlerinizin çeşitli önemli durumlarda (örneğin, şüpheli eylem uyarıları) hızlı ve etkili bir şekilde bilgilendirilmesini sağlamak için bu kanala bildirim gönderilir. Sadece yetkililerin görebileceği bir kanal seçilmesi tavsiye edilir. Bu kanal, sunucunuzun güvenliği ve düzeni için kritik bir rol oynamaktadır.</value>
+  </data>
+  <data name="dashReset" xml:space="preserve">
+    <value>Sıfırla</value>
+  </data>
+  <data name="dashSaveChanges" xml:space="preserve">
+    <value>Değişiklikleri Kaydet</value>
+  </data>
+  <data name="dashSelectServer" xml:space="preserve">
+    <value>Sunucu Seç</value>
+  </data>
+  <data name="dashSpamBlock" xml:space="preserve">
+    <value>Spam Engelleyici</value>
+  </data>
+  <data name="dashSpamBlockD1" xml:space="preserve">
+    <value>Bu seçeneği etkinleştirdiğinizde, Bitguard sunucunuzda spam içerikleri otomatik olarak izler ve filtreler. Bu, sunucunuzun temiz ve düzenli kalmasını sağlar ve spam içeriklerin topluluğunuza zarar vermesini engeller.</value>
+  </data>
+  <data name="dashSpamBlockD2" xml:space="preserve">
+    <value>Bu seçenek etkileştirildiğinde sunucunuza sunucuda gönderilen mesajlar sürekli olarak taranır. Tekrarlayan ifadeler engellenir ve kullanıcı susturularak özel mesaj yoluyla bir uyarı gönderilir. Aynı zamanda yetkililerin aksiyon alması için bildirim kanalında bir mesaj gönderilir.</value>
+  </data>
+  <data name="dashSpamBlockD3" xml:space="preserve">
+    <value>Bu özellik, istenmeyen içeriklerle başa çıkmak için daha fazla zaman harcamadan topluluğunuzun keyfini çıkarmanızı sağlar. Topluluğunuzun deneyimini geliştirmenize yardımcı olurken, istenmeyen içeriklerle mücadele etmek için daha fazla zaman ve kaynak harcamanıza gerek kalmadan sunucunuzu daha güvenli hale getirilir.</value>
+  </data>
+  <data name="dashSusCheck" xml:space="preserve">
+    <value>Sunuculararası Şüpheli Listesini Periyodik Olarak Kontrol Et</value>
+  </data>
+  <data name="dashSusCheckD1" xml:space="preserve">
+    <value>Bu seçenek etkinleştirildiğinde, Bitguard tarafından korunan diğer sunucularda şüpheli bulunmuş kullanıcılar sunucunuzda tespit edilir. Bu, sunucunuzun güvenliğini artırmanıza yardımcı olur, çünkü diğer sunuculardaki şüpheli kullanıcılar sunucunuza girdiğinde Bitguard tarafından tanınır ve işaretlenir. Böylece, potansiyel tehditlere karşı daha hızlı ve etkili bir şekilde müdahale edebilirsiniz.</value>
+  </data>
+  <data name="dashSusCheckD2" xml:space="preserve">
+    <value>Bu özellik, Bitguard'ın sunuculararası işbirliğine dayanarak güvenlik önlemlerini artırmasına olanak tanır ve topluluğunuzun daha güvenli olmasına yardımcı olur.</value>
+  </data>
+  <data name="dashTitle" xml:space="preserve">
+    <value>Yönetim Paneli</value>
+  </data>
+  <data name="errorD" xml:space="preserve">
+    <value>BİR HATA MEYDANA GELDİ</value>
+  </data>
+  <data name="errorGoMain" xml:space="preserve">
+    <value>ANA SAYFAYA DÖN</value>
+  </data>
+  <data name="errorTitle" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="faqD1" xml:space="preserve">
+    <value>Bitguard, Discord sunucularında kullanılmak üzere özel olarak tasarlanmış bir bot'tur. Sunucu güvenliği, dolandırıcılık önleme ve spam denetimi gibi çeşitli özellikler sunar.</value>
+  </data>
+  <data name="faqD10" xml:space="preserve">
+    <value>Daha fazla sorunuz veya sorununuz varsa, lütfen bize sitenin en sağ alt tarafında bulunan "İletişim" butonu üzerinden ulaşın. Size yardımcı olmaktan memnuniyet duyarız.</value>
+  </data>
+  <data name="faqD2" xml:space="preserve">
+    <value>Bitguard'ı sunucunuza eklemek için resmi web sitesini ziyaret edin ve talimatları izleyin.</value>
+  </data>
+  <data name="faqD3" xml:space="preserve">
+    <value>Ücretsiz sürüm temel güvenlik özelliklerini içerirken, premium sürüm ek özellikler ve gelişmiş güvenlik sunar. Premium sürüm, daha fazla özelleştirme seçeneği ve destek sağlar.</value>
+  </data>
+  <data name="faqD4" xml:space="preserve">
+    <value>Bitguard, Discord'un kurallarına uygun her sunucuda kullanılabilir.</value>
+  </data>
+  <data name="faqD5" xml:space="preserve">
+    <value>Bitguard, sunucunuzdaki üyeleri tarar, şüpheli davranışları izler, sakıncalı içerikleri filtreler ve gerektiğinde moderasyon işlemleri gerçekleştirir.</value>
+  </data>
+  <data name="faqD6" xml:space="preserve">
+    <value>Bitguard otomatik olarak güncellenir, bu nedenle manuel güncelleme yapmanıza gerek yoktur.</value>
+  </data>
+  <data name="faqD7" xml:space="preserve">
+    <value>Bitguard, potansiyel tehditleri tespit etmek ve kullanıcıları korumak için çeşitli güvenlik önlemleri alır.</value>
+  </data>
+  <data name="faqD8" xml:space="preserve">
+    <value>Bitguard'ı sunucunuzun ihtiyaçlarına göre yapılandırabilirsiniz. Web sitesinde giriş yaptıktan sonra "Sunucularım" bölümünden özelleştirmeleri yapabilirsiniz.</value>
+  </data>
+  <data name="faqD9" xml:space="preserve">
+    <value>Bitguard'ı desteklemek için resmi web sitesini ziyaret edin ve bağış yapma veya premium sürümü kullanma seçeneklerini inceleyin.</value>
+  </data>
+  <data name="faqQ1" xml:space="preserve">
+    <value>Bitguard nedir?</value>
+  </data>
+  <data name="faqQ10" xml:space="preserve">
+    <value>Bitguard ile ilgili başka bir sorunuz mu var?</value>
+  </data>
+  <data name="faqQ2" xml:space="preserve">
+    <value>Bitguard'ı sunucuma nasıl eklerim?</value>
+  </data>
+  <data name="faqQ3" xml:space="preserve">
+    <value>Bitguard'ın ücretsiz ve premium sürümü arasındaki fark nedir?</value>
+  </data>
+  <data name="faqQ4" xml:space="preserve">
+    <value>Hangi sunucularda Bitguard'ı kullanabilirim?</value>
+  </data>
+  <data name="faqQ5" xml:space="preserve">
+    <value>Bitguard sunucumda ne tür işlemler yapar?</value>
+  </data>
+  <data name="faqQ6" xml:space="preserve">
+    <value>Bitguard nasıl güncellenir?</value>
+  </data>
+  <data name="faqQ7" xml:space="preserve">
+    <value>Bitguard sunucumu nasıl korur?</value>
+  </data>
+  <data name="faqQ8" xml:space="preserve">
+    <value>Bitguard'ı nasıl yapılandırabilirim?</value>
+  </data>
+  <data name="faqQ9" xml:space="preserve">
+    <value>Bitguard'a nasıl destek sağlayabilirim?</value>
+  </data>
+  <data name="faqTitle" xml:space="preserve">
+    <value>Sıkça Sorulan Sorular</value>
+  </data>
+  <data name="indexD" xml:space="preserve">
+    <value>Bitguard, sunucunuzun güvenliğini sağlamak için hazır! Üyeleri ve mesajları sürekli tarar, şüpheli davranışları hızlıca tespit eder ve gerekli aksiyonları alır. Dolandırıcılığa karşı özel olarak donatılmıştır. Topluluğunuzun daha güvenli bir discord deneyimi yaşamasına yardım etmek için Bitguard'ı hemen ekleyin!</value>
+  </data>
+  <data name="indexInvite" xml:space="preserve">
+    <value>Discord'a Ekle</value>
+  </data>
+  <data name="indexLearnMore" xml:space="preserve">
+    <value>Daha Fazla Bilgi</value>
+  </data>
+  <data name="indexTitle" xml:space="preserve">
+    <value>Anasayfa</value>
+  </data>
+  <data name="layoutContact" xml:space="preserve">
+    <value>İletişim</value>
+  </data>
+  <data name="layoutContactForm" xml:space="preserve">
+    <value>İletişim Formu</value>
+  </data>
+  <data name="layoutCurrentLang" xml:space="preserve">
+    <value>TR</value>
+  </data>
+  <data name="layoutFaq" xml:space="preserve">
+    <value>S.S.S.</value>
+  </data>
+  <data name="layoutFormError" xml:space="preserve">
+    <value>Lütfen Biraz Bekleyin</value>
+  </data>
+  <data name="layoutFormErrorMessage" xml:space="preserve">
+    <value>Kısa sürede çok fazla mesaj göndermeye çalıştınız. Lütfen daha sonra tekrar deneyin.</value>
+  </data>
+  <data name="layoutFormSent" xml:space="preserve">
+    <value>Form Gönderildi</value>
+  </data>
+  <data name="layoutFormSentMessage" xml:space="preserve">
+    <value>Yazmış olduğunuz mail adresinden tarafınıza dönüş yapılacaktır.</value>
+  </data>
+  <data name="layoutInvalidMail" xml:space="preserve">
+    <value>Geçersiz e-posta</value>
+  </data>
+  <data name="layoutLogin" xml:space="preserve">
+    <value>Giriş Yap</value>
+  </data>
+  <data name="layoutMail" xml:space="preserve">
+    <value>E-Posta</value>
+  </data>
+  <data name="layoutMessage" xml:space="preserve">
+    <value>Mesaj</value>
+  </data>
+  <data name="layoutMetaContent" xml:space="preserve">
+    <value>Bitguard, sunucunuzun güvenliğini sağlamak için hazır! Üyeleri ve mesajları sürekli tarar, şüpheli davranışları hızlıca tespit eder ve gerekli aksiyonları alır. Dolandırıcılığa karşı özel olarak donatılmıştır.</value>
+  </data>
+  <data name="layoutMyServers" xml:space="preserve">
+    <value>Sunucularım</value>
+  </data>
+  <data name="layoutPrivacy" xml:space="preserve">
+    <value>Gizlilik</value>
+  </data>
+  <data name="layoutSend" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="pd1" xml:space="preserve">
+    <value>Omvio&amp;Daniasu, HİZMET sağlayan www.bitguard.com web sitesini işletmektedir.</value>
+  </data>
+  <data name="pd10" xml:space="preserve">
+    <value>Hizmet kullanıcılarımıza, bu üçüncü tarafların Kişisel Bilgilerinize erişebildiğini bildirmek istiyoruz. Sebebi ise kendilerine verilen görevleri bizim adımıza yerine getirmektir. Ancak bilgileri başka herhangi bir amaçla açıklamamak veya kullanmamakla yükümlüdürler.</value>
+  </data>
+  <data name="pd11" xml:space="preserve">
+    <value>Kişisel Bilgilerinizi bize sağlama konusunda güveninize değer veriyoruz ve bu nedenle ticari olarak kabul edilebilir koruma yöntemlerini kullanmaya çalışıyoruz. Ancak internet üzerinden hiçbir iletim yönteminin veya elektronik depolama yönteminin %100 güvenli ve güvenilir olmadığını ve mutlak güvenliğini garanti edemediğimizi unutmayın.</value>
+  </data>
+  <data name="pd12" xml:space="preserve">
+    <value>Hizmetimiz diğer sitelere bağlantılar içerebilir. Üçüncü taraf bir bağlantıya tıklarsanız o siteye yönlendirilirsiniz. Bu harici sitelerin bizim tarafımızdan işletilmediğini unutmayın. Bu nedenle bu web sitelerinin Gizlilik Politikasını incelemenizi önemle tavsiye ederiz. Herhangi bir üçüncü taraf site veya hizmetin içeriği, gizlilik politikaları veya uygulamaları üzerinde hiçbir kontrolümüz yoktur ve bunlar konusunda hiçbir sorumluluk kabul etmeyiz.</value>
+  </data>
+  <data name="pd13" xml:space="preserve">
+    <value>Hizmetlerimiz 13 yaşın altındaki kişilere yönelik değildir. 13 yaşın altındaki çocuklardan bilerek kişisel olarak tanımlanabilir bilgiler toplamıyoruz. 13 yaşın altındaki bir çocuğun bize kişisel bilgiler sağladığını tespit etmemiz durumunda, bu bilgileri derhal sunucularımızdan sileriz. Ebeveyn veya vasi iseniz ve çocuğunuzun bize kişisel bilgiler verdiğini biliyorsanız, gerekli işlemleri yapabilmemiz için lütfen bizimle iletişime geçin.</value>
+  </data>
+  <data name="pd14" xml:space="preserve">
+    <value>Gizlilik Politikamızı zaman zaman güncelleyebiliriz. Bu nedenle herhangi bir değişiklik olup olmadığını görmek için bu sayfayı periyodik olarak incelemenizi öneririz. Yeni Gizlilik Politikasını bu sayfada yayınlayarak sizi herhangi bir değişiklik konusunda bilgilendireceğiz. Bu değişiklikler bu sayfada yayınlandıktan hemen sonra yürürlüğe girer.</value>
+  </data>
+  <data name="pd15" xml:space="preserve">
+    <value>Gizlilik Politikamız hakkında herhangi bir sorunuz veya öneriniz varsa bizimle iletişime geçmekten çekinmeyin.</value>
+  </data>
+  <data name="pd2" xml:space="preserve">
+    <value>Bu sayfa, herhangi birinin Hizmetimizi, Bitguard web sitesini kullanmaya karar vermesi durumunda, web sitesi ziyaretçilerini Kişisel Bilgilerin toplanması, kullanılması ve ifşa edilmesine ilişkin politikalarımız hakkında bilgilendirmek için kullanılır.</value>
+  </data>
+  <data name="pd3" xml:space="preserve">
+    <value>Hizmetimizi kullanmayı seçerseniz bu politikayla bağlantılı bilgilerin toplanmasını ve kullanılmasını kabul etmiş olursunuz. Topladığımız Kişisel Bilgiler, Hizmeti sağlamak ve geliştirmek için kullanılır. Bilgilerinizi bu Gizlilik Politikasında açıklanan durumlar dışında kimseyle kullanmayacağız veya paylaşmayacağız.</value>
+  </data>
+  <data name="pd4" xml:space="preserve">
+    <value>Bu Gizlilik Politikasında kullanılan terimler, bu Gizlilik Politikasında aksi belirtilmediği sürece www.bitguard.com adresinden erişilebilen Şartlar ve Koşullarımızla aynı anlamlara sahiptir.</value>
+  </data>
+  <data name="pd5" xml:space="preserve">
+    <value>Hizmetimizi kullanırken daha iyi bir deneyim sağlamak için, adınız, telefon numaranız ve posta adresiniz dahil ancak bunlarla sınırlı olmamak üzere, kişisel olarak tanımlanabilecek bazı bilgileri bize sağlamanızı isteyebiliriz. Topladığımız bilgiler sizinle iletişim kurmak veya kimliğinizi belirlemek için kullanılacaktır.</value>
+  </data>
+  <data name="pd6" xml:space="preserve">
+    <value>Hizmetimizi her ziyaret ettiğinizde, tarayıcınızın bize gönderdiği ve Günlük Verileri adı verilen bilgileri topladığımızı size bildirmek isteriz. Bu Günlük Verileri, bilgisayarınızın İnternet Protokolü ("IP") adresi, tarayıcı sürümü, Hizmetimizin ziyaret ettiğiniz sayfaları, ziyaretinizin saati ve tarihi, bu sayfalarda geçirilen süre ve diğer istatistikler gibi bilgileri içerebilir.</value>
+  </data>
+  <data name="pd7" xml:space="preserve">
+    <value>Çerezler, genellikle anonim ve benzersiz bir tanımlayıcı olarak kullanılan, az miktarda veri içeren dosyalardır. Bunlar, ziyaret ettiğiniz web sitesinden tarayıcınıza gönderilir ve bilgisayarınızın sabit diskinde saklanır.</value>
+  </data>
+  <data name="pd8" xml:space="preserve">
+    <value>Web sitemiz bu "çerezleri" bilgi toplamak ve Hizmetimizi geliştirmek için kullanır. Bu çerezleri kabul etme veya reddetme seçeneğiniz vardır ve bilgisayarınıza ne zaman bir çerez gönderileceğini bilirsiniz. Çerezlerimizi reddetmeyi seçerseniz Hizmetimizin bazı bölümlerini kullanamayabilirsiniz.</value>
+  </data>
+  <data name="pd9" xml:space="preserve">
+    <value>Aşağıdaki nedenlerden dolayı üçüncü taraf şirketleri ve bireyleri istihdam edebiliriz:</value>
+  </data>
+  <data name="ph1" xml:space="preserve">
+    <value>Omvio&amp;Daniasu Gizlilik Politikası</value>
+  </data>
+  <data name="ph10" xml:space="preserve">
+    <value>Bize Ulaşın</value>
+  </data>
+  <data name="ph2" xml:space="preserve">
+    <value>Bilgi Toplama ve Kullanma</value>
+  </data>
+  <data name="ph3" xml:space="preserve">
+    <value>Kayıt Tutma</value>
+  </data>
+  <data name="ph4" xml:space="preserve">
+    <value>Çerezler</value>
+  </data>
+  <data name="ph5" xml:space="preserve">
+    <value>Servis Sağlayıcılar</value>
+  </data>
+  <data name="ph6" xml:space="preserve">
+    <value>Güvenlik</value>
+  </data>
+  <data name="ph7" xml:space="preserve">
+    <value>Diğer Sitelere Bağlantılar</value>
+  </data>
+  <data name="ph8" xml:space="preserve">
+    <value>Çocukların Gizliliği</value>
+  </data>
+  <data name="ph9" xml:space="preserve">
+    <value>Gizlilik Politikasında Değişiklik</value>
+  </data>
+  <data name="pli1" xml:space="preserve">
+    <value>Hizmetimizi kolaylaştırmak için;</value>
+  </data>
+  <data name="pli2" xml:space="preserve">
+    <value>Bizim adımıza hizmeti sağlamak için;</value>
+  </data>
+  <data name="pli3" xml:space="preserve">
+    <value>To perform Service-related services; or</value>
+  </data>
+  <data name="pli4" xml:space="preserve">
+    <value>Hizmetimizin nasıl kullanıldığını analiz etmemize yardımcı olmak için.</value>
+  </data>
+  <data name="premAllPrem" xml:space="preserve">
+    <value>Beta sürümünde bütün kullanıcılar premium yetkilerine sahiptir.</value>
+  </data>
+  <data name="premD" xml:space="preserve">
+    <value>BitGuard'ın tüm özelliklerine sınırsız erişerek sunucunuzun güvenliğini ileri seviyeye taşıyın</value>
+  </data>
+  <data name="premDataSecurity" xml:space="preserve">
+    <value>Kişisel Veri Koruması</value>
+  </data>
+  <data name="premDataSecurityD" xml:space="preserve">
+    <value>Kullanıcıların kişisel verilerinin gizliliği önemlidir. Bitguard, kişisel verilerinizi korumak için hassas bir şekilde tasarlanmıştır ve bu verilerin kötüye kullanılmasını önlemek için önlemler alır.</value>
+  </data>
+  <data name="premGetPrem" xml:space="preserve">
+    <value>Premium'u Al</value>
+  </data>
+  <data name="premInterserverNet" xml:space="preserve">
+    <value>Sunuculararası Ağ</value>
+  </data>
+  <data name="premInterserverNetD" xml:space="preserve">
+    <value>Botumuz, kullanıcıların Bitguard kullanan başka sunucularda şüpheli davranışlar sergileyip sergilemediğini kontrol eder. Eğer bir kullanıcı başka bir yerde şüpheli bulunduysa, bu bilgi moderatörlere iletilir.</value>
+  </data>
+  <data name="premInvite" xml:space="preserve">
+    <value>Discord'a Ekle</value>
+  </data>
+  <data name="premMsgScan" xml:space="preserve">
+    <value>Mesaj Taraması</value>
+  </data>
+  <data name="premMsgScanD" xml:space="preserve">
+    <value>Sunucunuzdaki mesajlar taranır. Bu taramalar, zararlı içerikleri veya istenmeyen davranışları hızlıca tespit etmemize yardımcı olur. Phishing bağlantıları, dolandırıcılık için kullanılan web siteleri ve diğer olumsuz içerikler, otomatik olarak filtrelenir ve gerekli önlemler alınır.</value>
+  </data>
+  <data name="premQuarantine" xml:space="preserve">
+    <value>Karantina</value>
+  </data>
+  <data name="premQuarantineD" xml:space="preserve">
+    <value>Şüpheli davranış sergileyen üyeler sunucunuzda sınırlanır ve özel bir karantina kanalında tutulur. Bu önlem, sunucunuzun genel güvenliğini korumayı amaçlar ve anında müdahale sağlar. Üyeler, karantina bölgesine taşınarak eylemleri durdurulur ve moderatörlere sorun bildirilir. Bu yaklaşım, moderatörlere şüphelinin davranışlarını inceleme ve karar verme fırsatı sunar.</value>
+  </data>
+  <data name="premScamDetect" xml:space="preserve">
+    <value>Spam ve Tehdit Tespiti</value>
+  </data>
+  <data name="premScamDetectD" xml:space="preserve">
+    <value>Bitguard, sunucunuzdaki spam mesajlarını ve potansiyel tehditleri tanır ve bu mesajları kullanıcıların görüşünden uzaklaştırır. Bu, sunucunuzun temiz ve düzenli kalmasını sağlar.</value>
+  </data>
+  <data name="premServerCount" xml:space="preserve">
+    <value>Korunan Sunucu</value>
+  </data>
+  <data name="premSusCaught" xml:space="preserve">
+    <value>Yakalanmış Şüpheliler</value>
+  </data>
+  <data name="premTitle" xml:space="preserve">
+    <value>Premium</value>
+  </data>
+  <data name="premUserNtf" xml:space="preserve">
+    <value>Kullanıcı Bildirimleri</value>
+  </data>
+  <data name="premUserNtfD" xml:space="preserve">
+    <value>Şüpheli veya kötü niyetli davranışlar sergileyen kullanıcılar hakkında anında bildirimler alırsınız. Bu, moderatörlerin hızlı bir şekilde müdahale etmelerini ve olası sorunları çözmelerini sağlar.</value>
+  </data>
+  <data name="premUserScan" xml:space="preserve">
+    <value>Üye Taraması</value>
+  </data>
+  <data name="premUserScanD" xml:space="preserve">
+    <value>Sunucunuzdaki üyeler sürekli olarak taranır ve davranışları gözlemlenir. Bitguard, potansiyel olarak tehlikeli veya şüpheli davranışlar sergileyen üyeleri tanır.</value>
+  </data>
+  <data name="privacyTitle" xml:space="preserve">
+    <value>Gizlilik</value>
+  </data>
+</root>

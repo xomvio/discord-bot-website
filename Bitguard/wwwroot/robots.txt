@@ -1,0 +1,9 @@
+﻿User-Agent: *
+Allow: 
+Allow: /
+Allow: /dashboard
+Disallow: /error
+Disallow: /changelanguage
+Disallow: /dashboard/logout
+
+Sitemap: http://bitguardbot.com/sitemap.xml

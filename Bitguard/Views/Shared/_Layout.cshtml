@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Bitguard | #Scamnomore">
+    <meta name="keywords" content="bitguard, discord, discord bot, discord security, server security, anti scam">
+    <meta name="description" content="@L.Get("layoutMetaContent")">
+
+    <title>@ViewData["Title"] - Bitguard</title>
+
+    <!-- Facebook (Opengraph) Meta Tags -->
+    <meta property="og:url" content="https://www.bitguardbot.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bitguard - Secure Your Discord Server">
+    <meta property="og:description" content="@L.Get("layoutMetaContent")">
+    <meta property="og:image" content="https://bitguardbot.com/img/thumbnail.jpg">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="bitguardbot.com">
+    <meta property="twitter:url" content="https://www.bitguardbot.com">
+    <meta name="twitter:title" content="Bitguard - Secure Your Discord Server">
+    <meta name="twitter:description" content="@L.Get("layoutMetaContent")">
+    <meta name="twitter:image" content="https://bitguardbot.com/img/thumbnail.jpg">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="bg-dark main-bottom-margin">
+    <header>
+        <nav class="container-fluid">
+            <div class="row mb-3">
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center justify-content-md-start text-white">
+                <a href="/" class="text-decoration-none">
+                    <img class="navLogo" src="~/img/BitGuardLogo.png" alt="Bitguard brand logo"/>
+                </a>
+                <span class="text-white">(Beta)</span>
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-md-end justify-content-around align-items-center navx">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <div>
+                            <a href="/dashboard" class="dc dc-dc">
+                                <span class="ms-0">@L.Get("layoutLogin")</span>
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="/dashboard" class="dc dc-dc">
+                                <span>@L.Get("layoutMyServers")</span>
+                            </a>
+                            <a href="/Logout" class="logoutBtn ms-0 ms-md-2 me-0 me-md-2">
+                                <div class="logoutSign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                            </a>
+                        </div>
+                    }
+                <div>
+                    <a href="/premium" class="dc dc-none">
+                        Premium
+                    </a>
+                </div>
+                <div>
+                    <a href="/FAQ" class="dc dc-none">
+                            @L.Get("layoutFaq")
+                    </a>
+                </div>
+                    <div class="" style="position:relative;display: flex;justify-content: center;">
+                    <a href="#" class="dc dc-none" onclick="showData('lang')">@L.Get("layoutCurrentLang")</a>
+                    <div id="lang" class="kolaps lang">
+                        <a class="dc dc-none dc-noshadow" asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="en-US">EN</a>
+                        <a class="dc dc-none dc-noshadow" asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="tr-TR">TR</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid text-white">
+        <main role="main bg-warning">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-dark footerx">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center fcolor ps-4 pe-4">
+                <p class="license" >Bitguard © 2023 by Omvio&Daniasu. All rights reserved</p>
+                <div class="d-md-flex d-block">
+                    <a class="privacybutton me-0 me-md-2" href="/privacy">@L.Get("layoutPrivacy")</a>
+                    <button id="commBtn" class="iletisimbutton">@L.Get("layoutContact")</button>
+                    <div id="commModal" class="mdl row">
+                        <div id="commSuccess" class="mdlcontent col-11 col-md-4">
+                            <div class="mdl-sent">
+                                <h1>@L.Get("layoutFormSent")</h1>
+                                <h4>@L.Get("layoutFormSentMessage")</h4>
+                            </div>
+                        </div>
+                        <div id="commFail" class="mdlcontent col-11 col-md-4">
+                            <div class="mdl-sent text-danger">
+                                <h1>@L.Get("layoutFormError")</h1>
+                                <h4>@L.Get("layoutFormErrorMessage")</h4>
+                            </div>
+                        </div>
+                        <div id="commForm" class="mdlcontent col-11 col-md-4">
+
+                            <div class="mdl-headnfoot">
+                                <h2 class="my-auto">@L.Get("layoutContactForm")</h2>
+                                <span id="closeModal" class="close">&times;</span>
+                            </div>
+
+                            <div class="mdl-body">
+                                <div>
+                                    <h5>@L.Get("layoutMail")</h5>
+                                    <input id="mail" name="mail" type="text" class="textinput" />
+                                    <span id="invalidMsg" class="invalidMsg" >@L.Get("layoutInvalidMail")</span>
+                                </div>
+                                <div>
+                                    <h5>@L.Get("layoutMessage")</h5>
+                                    <textarea rows="5" id="message" name="message" class="textinput"></textarea>
+                                </div>
+                                <div class="commsenddiv">
+                                    <button id="commSendBtn" type="button" class="commsendbtn">
+                                        @L.Get("layoutSend")
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mdl-headnfoot">
+                                <br />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

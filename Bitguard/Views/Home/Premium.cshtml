@@ -1,0 +1,151 @@
+﻿@using Bitguard.DiscordRazor;
+@{
+    ViewData["Title"] = "Premium";
+}
+<!--@@using DiscordRazor-->
+<div class="row d-flex justify-content-center premium-first">
+    <div class="col-11 col-md-5 m-auto">
+        <span class="fs-2 mb-2 text-center d-block">Premium</span>
+        <span class="fs-4 mt-4 text-center d-block">@L.Get("premD")</span>
+        <span class="fs-5 mt-2 text-center d-block">@L.Get("premAllPrem")</span>
+        <span class="d-block mt-4">
+            <span class="d-flex justify-content-center">
+                <a href="#" class="dc dc-premium m-3 m-md-0 mt-4 me-2 me-md-4">
+                    <span class="svg-wrapper">
+                        <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier"><style type="text/css">.st0 {fill: #ffffff;}</style>
+                                <g> 
+                                    <path class="st0" d="M512,152.469c0-21.469-17.422-38.875-38.891-38.875c-21.484,0-38.906,17.406-38.906,38.875 c0,10.5,4.172,20.016,10.938,27c-26.453,54.781-77.016,73.906-116.203,56.594c-34.906-15.438-47.781-59.563-52.141-93.75 c14.234-7.484,23.938-22.391,23.938-39.594C300.734,78.016,280.719,58,256,58c-24.703,0-44.734,20.016-44.734,44.719 c0,17.203,9.703,32.109,23.938,39.594c-4.359,34.188-17.234,78.313-52.141,93.75c-39.188,17.313-89.75-1.813-116.203-56.594 c6.766-6.984,10.938-16.5,10.938-27c0-21.469-17.422-38.875-38.891-38.875C17.422,113.594,0,131,0,152.469 c0,19.781,14.781,36.078,33.875,38.547l44.828,164.078h354.594l44.828-164.078C497.234,188.547,512,172.25,512,152.469z"></path>
+                                    <path class="st0" d="M455.016,425.063c0,15.984-12.953,28.938-28.953,28.938H85.938C69.953,454,57,441.047,57,425.063v-2.406 c0-16,12.953-28.953,28.938-28.953h340.125c16,0,28.953,12.953,28.953,28.953V425.063z"></path>
+                                </g> 
+                            </g>
+                        </svg>
+                    </span>
+                    <span>@L.Get("premGetPrem")</span>
+                </a>
+                <button class="dc dc-premium-invite m-3 m-md-0 mt-4 ms-2 ms-md-4 text-white">
+                    <div class="svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="40" height="40">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor" d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"></path>
+                        </svg>
+                    </div>
+                    <span class="ms-0">@L.Get("premInvite")</span>
+                </button>
+            </span>
+        </span>
+    </div>
+</div>
+<div class="row premium-counts d-flex justify-content-around justify-content-md-center align-items-center fs-3">
+    <div class="col-12 col-md-4">
+        <div class="counts">
+            <p class="m-0">@L.Get("premServerCount")</p>
+            <p class="count">@BotActionCounter.serverCount</p>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="counts">
+            <p class="m-0">@L.Get("premSusCaught")</p>
+            <p class="count">@BotActionCounter.susCount</p>
+        </div>
+    </div>
+</div>
+<div class="row premium-main d-flex justify-content-center">
+    <div class="col-11 col-md-6">
+        <div class="row premrow">
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <div class="loader">
+                    <span></span>
+                </div>
+            </div>
+            <div class="col-12 col-md-7 d-flex align-items-center">
+                <div>
+                    <p class="fs-2 d-block">@L.Get("premUserScan")</p>
+                    <p class="fs-6 d-block">
+                        @L.Get("premUserScanD")
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row premrow">
+            <div class="col-12 col-md-7 d-flex align-items-center order-1 order-md-0">
+                <div>
+                    <p class="fs-2 d-block">@L.Get("premQuarantine")</p>
+                    <p class="fs-6 d-block">
+                        @L.Get("premQuarantineD")
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img class="premimg" src="~/img/quarantine.png" alt="@L.Get("premQuarantine")" />
+            </div>
+        </div>
+        <div class="row premrow">
+            <div class="col-12 col-md-5 d-flex align-items-center justify-content-center">
+                <img class="premimg" src="~/img/search.png" alt="@L.Get("premInterserverNet")" />
+            </div>
+            <div class="col-12 col-md-7 d-flex justify-content-center align-items-center">
+                <div>
+                    <p class="fs-2 d-block">@L.Get("premInterserverNet")</p>
+                    <p class="fs-6 d-block">
+                        @L.Get("premInterserverNetD")
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row premrow">
+            <div class="col-12 col-md-7 d-flex align-items-center order-1 order-md-0">
+                <div>
+                    <p class="fs-2 d-block">@L.Get("premMsgScan")</p>
+                    <p class="fs-6 d-block">
+                        @L.Get("premMsgScanD")
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img class="premimg" src="~/img/messageSearch.png"  alt="@L.Get("premMsgScan")"/>
+            </div>
+        </div>
+        <div class="row premrow">
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img class="premimg" src="~/img/protection.png" alt="@L.Get("premScamDetect")" />
+            </div>
+            <div class="col-12 col-md-7 d-flex align-items-center">
+                <div>
+                    <p class="fs-2 d-block">@L.Get("premScamDetect")</p>
+                    <p class="fs-6 d-block">
+                        @L.Get("premScamDetectD")
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row premrow">
+            <div class="col-12 col-md-7 d-flex align-items-center order-1 order-md-0">
+                <div>
+                    <p class="fs-2 d-block">@L.Get("premUserNtf")</p>
+                    <p class="fs-6 d-block">
+                        @L.Get("premUserNtfD")
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                <img class="premimg" src="~/img/notification.png" alt="@L.Get("premUserNtf")" />
+            </div>
+        </div>
+        <div class="row premrow">
+            <div class="col-12 col-md-5 d-flex align-items-center justify-content-center">
+                <img class="premimg" src="~/img/identity.png" alt="@L.Get("premDataSecurity")" />
+            </div>
+            <div class="col-12 col-md-7 d-flex align-items-center">
+                <div>
+                    <p class="fs-2 d-block">@L.Get("premDataSecurity")</p>
+                    <p class="fs-6 d-block">
+                        @L.Get("premDataSecurityD")
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
